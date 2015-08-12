@@ -128,6 +128,20 @@
                 //assert
                 $this->assertEquals("p1", $result);
             }
+
+            function test_null_player_one()
+            {
+                //arrange
+                $test_RockPaperScissors = new RockPaperScissors;
+                $player_one_input = "";
+                $player_two_input != "";
+
+                //act
+                $result = $test_RockPaperScissors->playRockPaperScissors($player_one_input, $player_two_input);
+
+                //assert
+                $this->assertEquals("error", $result);
+            }
         }
     }
 
