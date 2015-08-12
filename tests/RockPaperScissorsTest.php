@@ -72,6 +72,7 @@
                 //assert
                 $this->assertEquals("p1", $result);
             }
+
             function test_paper_rock()
             {
                 //arrange
@@ -84,6 +85,20 @@
 
                 //assert
                 $this->assertEquals("p1", $result);
+            }
+
+            function test_paper_scissors()
+            {
+                //arrange
+                $test_RockPaperScissors = new RockPaperScissors;
+                $player_one_input = "paper";
+                $player_two_input = "scissors";
+
+                //act
+                $result = $test_RockPaperScissors->playRockPaperScissors($player_one_input, $player_two_input);
+
+                //assert
+                $this->assertEquals("p2", $result);
             }
         }
     }
