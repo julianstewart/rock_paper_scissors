@@ -5,8 +5,12 @@
 
     session_start();
 
-    if (empty($_SESSION['player_choices'])) {
-        $_SESSION['player_choices'] = array();
+    if (empty($_SESSION['player_one_choice'])) {
+        $_SESSION['player_one_choice'] = (string)"";
+    }
+
+    if (empty($_SESSION['player_two_choice'])) {
+        $_SESSION['player_two_choice'] = (string)"";
     }
 
     $app = new Silex\Application();
@@ -25,11 +29,14 @@
     });
 
     $app->post("/player_two", function() use ($app) {
-            $player_one_temp = ($_POST['p1']);
+        $player_one = new RockPaperScissors($_POST['p1']);
             return $app['twig']->render('player_two.html.twig');
     });
 
-
+    $app->post("/results", function() use ($app) {
+        $player_two = new RockPaperScissors($_POST['p2']);
+            return $app['twig']-render('results.html.twig');
+    })
 
     return $app;
 

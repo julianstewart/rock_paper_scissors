@@ -1,0 +1,4 @@
+- final $app->post method needs to call static RPS method that will receive its arguments from each player objects parameters
+
+- ALSO need to figure out $_SESSION issue
+- compare to CONTACT APP

@@ -2,10 +2,14 @@
     class RockPaperScissors
     {
 
-        private $player_one_input;
-        private $player_two_input;
+        private $player_choice;
 
-        function playRockPaperScissors($input_one, $input_two)
+        function __construct($player_input)
+        {
+            $this->player_input = $player_input;
+        }
+
+        static function playRockPaperScissors($input_one, $input_two)
         {
             $game_result = "";
             if (($input_one == $input_two) && (($input_one == "rock" || ($input_one == "paper") || $input_one == "scissors")) && (($input_two == "rock") || ($input_two == "paper") || ($input_two == "scissors"))) {
@@ -29,22 +33,14 @@
 
         }
 
-        function getPlayerOneInput()
+        function getPlayerInput()
         {
-            return $this->player_one_input;
-        }
-        function setPlayerOneInput($new_player_one_input)
-        {
-            $this->player_one_input = $new_player_one_input;
+            return $this->player_input;
         }
 
-        function getPlayerTwoInput()
+        function setPlayerInput($new_player_input)
         {
-            return $this->player_one_input;
-        }
-        function setPlayerTwoInput($new_player_two_input)
-        {
-            $this->player_two_input = $new_player_two_input;
+            $this->player_input = $new_player_input;
         }
 
 
