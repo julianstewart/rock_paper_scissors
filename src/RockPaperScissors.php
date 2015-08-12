@@ -16,6 +16,8 @@
                 $game_result = "p2";
             } elseif (($input_one == "scissors") && ($input_two == "rock")) {
                 $game_result = "p2";
+            } elseif (($input_one == "scissors") && ($input_two == "paper")) {
+                $game_result = "p1";
             }
             return $game_result;
 
