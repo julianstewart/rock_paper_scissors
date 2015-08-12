@@ -1,6 +1,10 @@
 <?php
     class RockPaperScissors
     {
+
+        private $player_one_input;
+        private $player_two_input;
+
         function playRockPaperScissors($input_one, $input_two)
         {
             $game_result = "";
@@ -24,5 +28,25 @@
             return $game_result;
 
         }
+
+        function getPlayerOneInput()
+        {
+            return $this->player_one_input;
+        }
+        function setPlayerOneInput($new_player_one_input)
+        {
+            $this->player_one_input = $new_player_one_input;
+        }
+
+        function getPlayerTwoInput()
+        {
+            return $this->player_one_input;
+        }
+        function setPlayerTwoInput($new_player_two_input)
+        {
+            $this->player_two_input = $new_player_two_input;
+        }
+
+
     }
  ?>
