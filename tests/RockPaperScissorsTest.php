@@ -11,7 +11,35 @@
                 $player_two_input = "rock";
 
                 //act
-                $result = $test_RockPaperScissors->rockPaperScissors($player_one_input, $player_two_input);
+                $result = $test_RockPaperScissors->playRockPaperScissors($player_one_input, $player_two_input);
+
+                //assert
+                $this->assertEquals("Draw", $result);
+            }
+
+            function test_paper_paper()
+            {
+                //arrange
+                $test_RockPaperScissors = new RockPaperScissors;
+                $player_one_input = "paper";
+                $player_two_input = "paper";
+
+                //act
+                $result = $test_RockPaperScissors->playRockPaperScissors($player_one_input, $player_two_input);
+
+                //assert
+                $this->assertEquals("Draw", $result);
+            }
+
+            function test_scissors_scissors()
+            {
+                //arrange
+                $test_RockPaperScissors = new RockPaperScissors;
+                $player_one_input = "scissors";
+                $player_two_input = "scissors";
+
+                //act
+                $result = $test_RockPaperScissors->playRockPaperScissors($player_one_input, $player_two_input);
 
                 //assert
                 $this->assertEquals("Draw", $result);
