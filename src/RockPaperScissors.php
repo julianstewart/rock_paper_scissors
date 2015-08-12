@@ -18,7 +18,7 @@
                 $game_result = "p2";
             } elseif (($input_one == "scissors") && ($input_two == "paper")) {
                 $game_result = "p1";
-            }
+            } else $game_result = "error";
             return $game_result;
 
         }
