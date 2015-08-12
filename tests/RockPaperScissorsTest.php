@@ -133,8 +133,22 @@
             {
                 //arrange
                 $test_RockPaperScissors = new RockPaperScissors;
-                $player_one_input = "";
-                $player_two_input != "";
+                $player_one_input = (string)"";
+                $player_two_input = "rock";
+
+                //act
+                $result = $test_RockPaperScissors->playRockPaperScissors($player_one_input, $player_two_input);
+
+                //assert
+                $this->assertEquals("error", $result);
+            }
+
+            function test_null_player_two()
+            {
+                //arrange
+                $test_RockPaperScissors = new RockPaperScissors;
+                $player_one_input = "rock";
+                $player_two_input = (string)"";
 
                 //act
                 $result = $test_RockPaperScissors->playRockPaperScissors($player_one_input, $player_two_input);
