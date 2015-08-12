@@ -8,6 +8,8 @@
                 $game_result = "Draw";
             } elseif (($input_one == "rock") && ($input_two == "paper")) {
                 $game_result = "p2";
+            } elseif (($input_one == "rock") && ($input_two == "scissors")) {
+                $game_result = "p1";
             }
             return $game_result;
 
