@@ -1,0 +1,17 @@
+BEHAVIOR
+
+User 1 inputs "Rock", User 2 inputs "Rock"; producing the output of DRAW
+
+User 1 inputs "Rock", User 2 inputs "Paper"; producing the output of "Paper covers rock! Player 2 wins!"
+
+User 1 inputs "Rock", User 2 inputs "Scissors"; producing the output of "Rock obliterates scissors! Player 1 wins!"
+
+User 1 inputs "Paper", User 2 inputs "Rock"; producing the output of "Paper covers rock! Player 1 wins!"
+
+User 1 inputs "Paper", User 2 inputs "Scissors"; producing the output of "Scissors cut paper! Player 2 wins!"
+
+User 1 inputs "Scissors", User 2 inputs "Rock"; producing the output of "Rock obliterates scissors! Player 2 wins!"
+
+User 1 inputs "Scissors", User 2 inputs "Paper"; producing the output of "Scissors cut paper! Player 1 wins!"
+
+One or both Users inputs NULL; producing the an error message saying "Both players must choose their weapon! Try again."
